@@ -22,6 +22,7 @@ while ((likeCars !== 'yes' && likeCars !== 'no' && likeCars !== 'y' && likeCars 
         alert(userName + ' WHY CAN\'T YOU JUST BE NORMAL');
     }
 
+
 var anotherLanguage = prompt('Can I play piano?').toLowerCase();
 
 while ((anotherLanguage !== 'yes' && anotherLanguage !== 'no' && anotherLanguage !== 'y' && anotherLanguage !== 'n' )) {
@@ -86,13 +87,13 @@ while ((favoriteColor !== 'yes' && favoriteColor !== 'no' && favoriteColor !== '
         alert(userName + ' WHY CAN\'T YOU JUST BE NORMAL');
     }
 
-if(answerCount = 5){
+if(answerCount === 5){
     alert('Wow, ' + userName + '!  You got 5/5 right! You\'re a genius!');
 }
 else if(answerCount <= 4 && answerCount > 0){
     alert('Not bad, ' + userName + '.  You got ' + answerCount + ' out of 5 right!');
 }
-else if(answerCount = 0){
+else if(answerCount === 0){
     alert('Wow.  Sorry ' + userName + '.  I\'m sure you have other redeeming qualities, but you got 0 out of 5 right.');
 }
 else{
