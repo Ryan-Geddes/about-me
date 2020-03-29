@@ -1,13 +1,7 @@
 'use strict';
 //use strict forces some additional checks on JS.  Keeps you from getting away from loose JS code.
 
-// var answerArr = [
-//     'yes', 
-//     'no', 
-//     'yes', 
-//     'yes', 
-//     'yes',];
-    
+
 var answerCount = 0;
 var userName = prompt('What is your name?');
 
@@ -127,6 +121,7 @@ for (var i = 0; i < 4; i++){
     }
 }
 
+
 //Array methods on page 530.  
 //Commonly used: pop to remove last element, push to add an element to the end, 
 //shift to add a value to beginning of array, unshift removes value at beginning of array
@@ -145,30 +140,30 @@ var carsArr = [
     
 var carGuess = prompt('Of my favorite cars, name one that\'s a badass nasty 80\'s shitbox?  You have 6 guesses.');
     
-    for (var i = 0; i < 6; i++){
-        if (carsArr.indexOf(carGuess) > 2 && i < 5){
-            carGuess = prompt('That ain\'t 80\'s rattlecan!  You have ' + (5-i) + ' guesses remaining.  Try again.');
-        }
-        else if (carsArr.indexOf(carGuess) === -1 && i < 5){
-            carGuess = prompt('That car isn\'t on my list!  You have ' + (5-i) + ' guesses remaining.  Try again.');
-        }
-        else if  (carsArr.indexOf(carGuess) <= 2){
-            alert('Hell yeah brother! That\'s a sicknasty rustbox! I also would have accepted the ' 
-            + carsArr[0] + ', '
-            + carsArr[1] + ', or '
-            + carsArr[2] + '. And it only took you '+ (i+1) + ' guesses! Congrats.');
-            answerCount++;
-            break;
-        }    
-        else if (carsArr.indexOf(carGuess) > 2 && i >= 5){
-            alert('Oh nooo. You\'re all out of guesses. :( Correct answers were: '
-            + carsArr[0] + ', '
-            + carsArr[1] + ', or '
-            + carsArr[2]);
-        }
-        else {
-            alert('Great. You broke it.  Please reload the page.')
-            break;
+for (var i = 0; i < 6; i++){
+    if (carsArr.indexOf(carGuess) > 2 && i < 5){
+        carGuess = prompt('That ain\'t 80\'s rattlecan!  You have ' + (5-i) + ' guesses remaining.  Try again.');
+    }
+    else if (carsArr.indexOf(carGuess) === -1 && i < 5){
+        carGuess = prompt('That car isn\'t on my list!  You have ' + (5-i) + ' guesses remaining.  Try again.');
+    }
+    else if  (carsArr.indexOf(carGuess) <= 2){
+        alert('Hell yeah brother! That\'s a sicknasty rustbox! I also would have accepted the ' 
+        + carsArr[0] + ', '
+        + carsArr[1] + ', or '
+        + carsArr[2] + '. And it only took you '+ (i+1) + ' guesses! Congrats.');
+        answerCount++;
+        break;
+    }    
+    else if (carsArr.indexOf(carGuess) > 2 && i >= 5){
+        alert('Oh nooo. You\'re all out of guesses. :( Correct answers were: '
+        + carsArr[0] + ', '
+        + carsArr[1] + ', or '
+        + carsArr[2]);
+    }
+    else {
+        alert('Great. You broke it.  Please reload the page.')
+        break;
     }
 }
 
@@ -184,4 +179,3 @@ else if(answerCount === 0){
 else{
     alert('Oh great you broke it.');
 }
-
