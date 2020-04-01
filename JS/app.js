@@ -159,7 +159,7 @@ var intGuess = parseInt(userGuess);
 
 for (var i = 0; i < 4; i++){
     
-    while(isNaN(userGuess)){
+    while(isNaN(userGuess)|| userGuess === ''){
         userGuess = prompt('must be a number')
         var intGuess = parseInt(userGuess);
 }
