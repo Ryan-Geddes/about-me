@@ -1,4 +1,8 @@
+
+
 'use strict';
+
+
 //use strict forces some additional checks on JS.  Keeps you from getting away from loose JS code.
 
 //Stretch Goal: Put question game into arrays as per below instructions:
@@ -8,6 +12,9 @@
 //even one huge multidimensional array), and modifying the game logic such that a ‘for’ 
 //loop will control the flow from question to question.
 
+//Array methods on page 530.  
+//Commonly used: pop to remove last element, push to add an element to the end, 
+//shift to add a value to beginning of array, unshift removes value at beginning of array
 
 
 // Logic Notes/Scratchpaper:
@@ -26,7 +33,9 @@
     // if the counter is 2, ask question two,
         //true condition
         // false condition
-
+//
+//        
+//END NOTES BEGIN CODE:
    
 var answerCount = 0;
 var userName = prompt('What is your name?');
@@ -150,7 +159,6 @@ for (var i = 0; i < 5; i++){
     } 
 }
 
-//Question 6
 
 var guessAnswer = Math.floor(Math.random()*100)
 console.log(guessAnswer)
@@ -185,10 +193,6 @@ for (var i = 0; i < 4; i++){
     }
 }
 
-//Array methods on page 530.  
-//Commonly used: pop to remove last element, push to add an element to the end, 
-//shift to add a value to beginning of array, unshift removes value at beginning of array
-
 var carsArr = [
     'IROC-Z', 
     'Buick Grand National', 
@@ -210,7 +214,7 @@ var carGuess = prompt('Of my favorite cars, name one that\'s a badass nasty 80\'
         else if (carsArr.indexOf(carGuess) === -1 && i < 5){
             carGuess = prompt('That car isn\'t on my list!  You have ' + (5-i) + ' guesses remaining.  Try again.');
         }
-        else if  (carsArr.indexOf(carGuess) <= 2){
+        else if  (carsArr.indexOf(carGuess) <= 2 && carsArr.indexOf(carGuess) > -1) {
             alert('Hell yeah brother! That\'s a sicknasty rustbox! I also would have accepted the ' 
             + carsArr[0] + ', '
             + carsArr[1] + ', or '
@@ -218,7 +222,7 @@ var carGuess = prompt('Of my favorite cars, name one that\'s a badass nasty 80\'
             answerCount++;
             break;
         }    
-        else if (carsArr.indexOf(carGuess) > 2 && i >= 5){
+        else if (carsArr.indexOf(carGuess) > 2 || carsArr.indexOf(carGuess) === -1 && i >= 5){
             alert('Oh nooo. You\'re all out of guesses. :( Correct answers were: '
             + carsArr[0] + ', '
             + carsArr[1] + ', or '
@@ -240,6 +244,6 @@ else if(answerCount === 0){
     alert('Wow.  Sorry ' + userName + '.  I\'m sure you have other redeeming qualities, but you got 0 out of 5 right.');
 }
 else{
-    alert('Oh great you broke it.');
+    alert('Oh great you broke the answer count system.');
 }
 
