@@ -165,6 +165,7 @@ for (var i = 0; i < 5; i++){
 
 fiveQuestions();
 
+function guessHundred() {
 var guessAnswer = Math.floor(Math.random()*100);
 console.log(guessAnswer)
 var userGuess = prompt('Let\'s play a game! Guess a number between 1 and 100.  You have 4 guesses.');
@@ -197,6 +198,9 @@ for (var i = 0; i < 4; i++){
         break;
     }
 }
+}
+
+guessHundred();
 
 var carsArr = [
     'IROC-Z', 
