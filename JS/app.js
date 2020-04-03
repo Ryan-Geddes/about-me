@@ -202,6 +202,7 @@ for (var i = 0; i < 4; i++){
 
 guessHundred();
 
+function guessCars() {
 var carsArr = [
     'IROC-Z', 
     'Buick Grand National', 
@@ -242,6 +243,8 @@ var carGuess = prompt('Of my favorite cars, name one that\'s a badass nasty 80\'
             break;
     }
 }
+}
+guessCars();
 
 if(answerCount === 7){
     alert('Wow, ' + userName + '!  You got ' + answerCount + '/7 right! You\'re a genius!');
