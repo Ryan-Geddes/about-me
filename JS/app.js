@@ -39,20 +39,22 @@
    
 var answerCount = 0;
 var userName = prompt('What is your name?');
-var arrayGuess; // =  prompt(questionArr[0]).toLowerCase();
+
+function fiveQuestions() {
 
 var responseArr = [
     userName + ', that\'s correct! I love cars!', 
     userName + ' Swing and a miss.  I love cars!', 
     userName + '. Almost.  I used to, but I\'ve forgotten now!', 
     userName + '.  Correct! I used to play as a kid. :(', 
-    userName + ', that\'s right! I\m from Bozeman!', 
+    userName + ', that\'s right! I\'m from Bozeman!', 
     userName + ', oh nooo.  That\'s incorrect, I grew up in Bozeman!',
     userName + ', that\'s right! I do work at Zillow!', 
     userName + ', oh nooo.  That\'s incorrect, I do work at Zillow!',   
     userName + ', that\'s right! I love green!', 
     userName + ', oh nooo.  That\'s incorrect, green is my favorite color!',  
-    userName + ' WHY CAN\'T YOU JUST BE NORMAL', ];
+    userName + ' WHY CAN\'T YOU JUST BE NORMAL'];
+
 
 var questionArr = [
     'Let\'s play a guessing game! I\'m going to ask you 5 yes or no questions.  Q1: Do I like Cars?', 
@@ -66,6 +68,8 @@ var answerArr = [
     'y', 
     'no', 
     'n', ];
+
+var arrayGuess; // =  prompt(questionArr[0]).toLowerCase();
 
 
 for (var i = 0; i < 5; i++){
@@ -87,7 +91,6 @@ for (var i = 0; i < 5; i++){
             alert(responseArr[10]);            
         }
     } 
-
 
     if (i = 2){
         var arrayGuess = prompt(questionArr[1]).toLowerCase();
@@ -158,9 +161,11 @@ for (var i = 0; i < 5; i++){
         }
     } 
 }
+}
 
+fiveQuestions();
 
-var guessAnswer = Math.floor(Math.random()*100)
+var guessAnswer = Math.floor(Math.random()*100);
 console.log(guessAnswer)
 var userGuess = prompt('Let\'s play a game! Guess a number between 1 and 100.  You have 4 guesses.');
 var intGuess = parseInt(userGuess);
