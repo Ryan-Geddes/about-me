@@ -165,6 +165,7 @@ for (var i = 0; i < 5; i++){
 
 fiveQuestions();
 
+function guessHundred() {
 var guessAnswer = Math.floor(Math.random()*100);
 console.log(guessAnswer)
 var userGuess = prompt('Let\'s play a game! Guess a number between 1 and 100.  You have 4 guesses.');
@@ -197,7 +198,11 @@ for (var i = 0; i < 4; i++){
         break;
     }
 }
+}
 
+guessHundred();
+
+function guessCars() {
 var carsArr = [
     'IROC-Z', 
     'Buick Grand National', 
@@ -238,7 +243,10 @@ var carGuess = prompt('Of my favorite cars, name one that\'s a badass nasty 80\'
             break;
     }
 }
+}
+guessCars();
 
+function answerCounter() {
 if(answerCount === 7){
     alert('Wow, ' + userName + '!  You got ' + answerCount + '/7 right! You\'re a genius!');
 }
@@ -251,4 +259,5 @@ else if(answerCount === 0){
 else{
     alert('Oh great you broke the answer count system.');
 }
-
+}
+answerCounter();
