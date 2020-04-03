@@ -246,6 +246,7 @@ var carGuess = prompt('Of my favorite cars, name one that\'s a badass nasty 80\'
 }
 guessCars();
 
+function answerCounter() {
 if(answerCount === 7){
     alert('Wow, ' + userName + '!  You got ' + answerCount + '/7 right! You\'re a genius!');
 }
@@ -258,4 +259,5 @@ else if(answerCount === 0){
 else{
     alert('Oh great you broke the answer count system.');
 }
-
+}
+answerCounter();
